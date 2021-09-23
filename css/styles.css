@@ -32,11 +32,12 @@ ul {
 }
 
 h1,
+h2,
 h3,
-h4 {
-  margin-top: 0;
+h4,
+p {
+  margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 .section {
@@ -308,9 +309,18 @@ h4 {
   text-align: left;
 }
 
-.advantage-icon {
+.avantage-title {
+  padding: 25px 0;
   background-color: var(--second-bg);
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantage-icon {
+  width: 70px;
+  height: 70px;
 }
 .section-title {
   font-family: var(--main-font);
@@ -427,18 +437,19 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: var(--icons-cl) 1px solid;
+  border-radius: 4px;
 }
 
 .clients-icon {
-  padding: 16px 32px;
-  border: var(--icons-cl) 1px solid;
-  border-radius: 4px;
   width: 170px;
   height: 92px;
 }
 
 .clients-link-svg {
   fill: var(--icons-cl);
+  width: 106px;
+  height: 60px;
 }
 .clients-link:hover .clients-link-svg,
 .clients-link:focus .clients-link-svg {
@@ -446,13 +457,13 @@ h4 {
 }
 .clients-icon:hover,
 .clients-icon:focus {
-  border-color: var(--logo-cl);
   fill: var(--logo-cl);
 }
 
 .clients-link:hover,
 .clients-link:focus {
   fill: var(--logo-cl);
+  border-color: var(--logo-cl);
 }
 
 .clients-icon:not(:last-child) {
@@ -538,20 +549,15 @@ h4 {
 }
 
 .social-title {
-  font-family: Roboto;
-  font-style: Bold;
+  margin-top: 12px;
   font-size: 14px;
-  line-height: 16px;
-  line-height: 100%;
-  align-items: center;
-  vertical-align: Top;
+  line-height: 1.14;
+
   letter-spacing: 3%;
   text-transform: uppercase;
 }
 
 .social-footer {
-  width: 206px;
-  height: 80px;
   margin-left: 70px;
 }
 
@@ -583,11 +589,18 @@ h4 {
 }
 
 .card-item {
+  display: block;
   flex-basis: calc(100% / 3 - 30);
+  box-sizing: border-box;
 }
 
-.card-item:focus,
-.card-item:hover {
+.card-link {
+  display: block;
+  border: solid 1px #eee;
+}
+
+.card-link:focus,
+.card-link:hover {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
     0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
@@ -637,14 +650,13 @@ h4 {
 .btn-second-tab:focus {
   color: #ffffff;
   background-color: var(--logo-cl);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .heading-card {
   padding: 20px 24px;
   background-color: #fff;
-  border-right: 1px solid#eeeeee;
-  border-left: 1px solid#eeeeee;
-  border-bottom: 1px solid#eeeeee;
 }
 
 .title-img {
@@ -652,7 +664,6 @@ h4 {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin: 0;
 }
 
 .paragraph {
