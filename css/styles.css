@@ -578,7 +578,6 @@ p {
 .works {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
   margin-bottom: -30px;
   margin-right: -30px;
 }
@@ -589,14 +588,11 @@ p {
 }
 
 .card-item {
-  display: block;
-  flex-basis: calc(100% / 3 - 30);
-  box-sizing: border-box;
+  flex-basis: calc((100% - 90px) / 3);
 }
 
 .card-link {
   display: block;
-  border: solid 1px #eee;
 }
 
 .card-link:focus,
@@ -620,6 +616,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .menu-portfolio .item:not(:last-child) {
@@ -657,6 +654,9 @@ p {
 .heading-card {
   padding: 20px 24px;
   background-color: #fff;
+  border-left: solid 1px #eee;
+  border-bottom: solid 1px #eee;
+  border-right: solid 1px #eee;
 }
 
 .title-img {
@@ -664,6 +664,12 @@ p {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .paragraph {
